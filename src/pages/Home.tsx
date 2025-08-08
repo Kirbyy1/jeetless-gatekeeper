@@ -23,14 +23,14 @@ const Home = () => {
       <section aria-label="Jeetless characters" className="container mx-auto max-w-4xl px-6 pb-10">
         <div className="flex items-end justify-between gap-6">
           <img
-            src="/lovable-uploads/34b7a2c6-4f43-422d-9d22-ab8e2729a736.png"
-            alt="Illustration of a confident holder"
+            src="/lovable-uploads/8c49cbd0-c041-47a1-8fae-b20ea1d47983.png"
+            alt="Jeetless meme character under shower"
             className="max-h-64 sm:max-h-72 object-contain"
             loading="lazy"
           />
           <img
-            src="/lovable-uploads/3f4d366c-7762-41e9-a511-e4fa31e3fd0d.png"
-            alt="Illustration symbolizing panic seller"
+            src="/lovable-uploads/8c49cbd0-c041-47a1-8fae-b20ea1d47983.png"
+            alt="Jeetless meme character under shower"
             className="max-h-64 sm:max-h-72 object-contain"
             loading="lazy"
           />
