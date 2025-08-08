@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 
-const PHRASE = "do not reedem it, sir";
+const PHRASE = "do not reedem it";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
@@ -39,11 +39,16 @@ const Index = () => {
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>Type the phrase exactly</DialogTitle>
-            <DialogDescription>Enter the text below to continue.</DialogDescription>
+            <DialogDescription>Enter the text from the image to continue.</DialogDescription>
           </DialogHeader>
           <div className="space-y-3">
-            <div className="border rounded-md p-3 text-center select-all">
-              <span className="font-mono text-sm">{PHRASE}</span>
+            <div className="border rounded-md p-3 text-center select-none">
+              <img
+                src="/lovable-uploads/a3e0d296-1c6b-4987-b782-bd0442ef35a0.png"
+                alt="Captcha phrase: do not reedem it"
+                className="mx-auto max-h-20 object-contain"
+                loading="lazy"
+              />
             </div>
             <Input
               value={value}
