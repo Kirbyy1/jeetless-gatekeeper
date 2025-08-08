@@ -16,7 +16,7 @@ const Home = () => {
 
       <section className="container mx-auto max-w-4xl px-6 py-8 text-center space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">Jeetless</h1>
-        <p className="text-sm text-muted-foreground">ca:xxxxx</p>
+        <p className="text-sm text-muted-foreground">31CwrUqJaqrBHNSEvVrfZ364kKwoF7wNg3sP6Tsnpump</p>
         <p className="text-lg leading-relaxed">{" we do not tolerate jeets. we are building the strongest holders. no jeetsallowed."}</p>
       </section>
 
