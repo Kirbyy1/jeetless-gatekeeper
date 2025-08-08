@@ -14,14 +14,6 @@ const Home = () => {
               className="w-full h-40 sm:h-56 md:h-64 object-cover rounded-lg"
               loading="eager"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img
-                src="/lovable-uploads/cef7ea7a-cc98-4a86-8727-9344a781fc42.png"
-                alt="Jeetless logo"
-                className="h-20 w-20 sm:h-24 sm:w-24 rounded-full ring-2 ring-ring bg-background/80 p-1"
-                loading="eager"
-              />
-            </div>
           </div>
         </div>
       </header>
