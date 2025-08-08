@@ -1,13 +1,67 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+
+const PHRASE = "do not reedem it, sir";
 
 const Index = () => {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+  const { toast } = useToast();
+  const navigate = useNavigate();
+
+  const handleVerify = () => {
+    const valid = value.trim() === PHRASE;
+    if (!valid) {
+      toast({ title: "Verification failed", description: "Please type the phrase exactly as shown." });
+      return;
+    }
+    localStorage.setItem("jeetless_verified", "true");
+    toast({ title: "Verified", description: "Welcome to Jeetless." });
+    setOpen(false);
+    navigate("/home");
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen flex items-center justify-center bg-background">
+      <SEO title="Jeetless — Prove you are not a jeet" description="Simple verification to enter Jeetless." />
+      <section className="text-center space-y-6 p-6">
+        <h1 className="text-4xl font-bold tracking-tight">Jeetless</h1>
+        <p className="text-muted-foreground">Prove you are not a jeet to continue</p>
+        <Button variant="default" onClick={() => setOpen(true)}>Prove you are not a jeet</Button>
+      </section>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Type the phrase exactly</DialogTitle>
+            <DialogDescription>Enter the text below to continue.</DialogDescription>
+          </DialogHeader>
+          <div className="space-y-3">
+            <div className="border rounded-md p-3 text-center select-all">
+              <span className="font-mono text-sm">{PHRASE}</span>
+            </div>
+            <Input
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              placeholder="Type it here"
+              aria-label="Verification input"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') handleVerify();
+              }}
+            />
+          </div>
+          <DialogFooter>
+            <Button variant="secondary" onClick={() => setOpen(false)}>Cancel</Button>
+            <Button onClick={handleVerify}>Verify</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </main>
   );
 };
 
