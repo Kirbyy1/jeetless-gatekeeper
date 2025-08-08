@@ -6,16 +6,12 @@ const Home = () => {
       <SEO title="Jeetless — Strongest Holders" description="We do not tolerate jeets. Building the strongest holders. No jeetsallowed." />
 
       <header className="w-full">
-        <div className="container mx-auto p-4">
-          <div className="relative">
-            <img
-              src="/lovable-uploads/93b21afe-b83b-4f2f-b1c7-4aef5d108cc4.png"
-              alt="Jeetless banner"
-              className="w-full h-40 sm:h-56 md:h-64 object-cover rounded-lg"
-              loading="eager"
-            />
-          </div>
-        </div>
+        <img
+          src="/lovable-uploads/93b21afe-b83b-4f2f-b1c7-4aef5d108cc4.png"
+          alt="Jeetless banner"
+          className="w-full h-48 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover block"
+          loading="eager"
+        />
       </header>
 
       <section className="container mx-auto max-w-4xl px-6 py-8 text-center space-y-4">
