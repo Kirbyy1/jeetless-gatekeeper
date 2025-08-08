@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 
-const PHRASE = "do not reedem it";
+const PHRASE = "shower";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
@@ -44,8 +44,8 @@ const Index = () => {
           <div className="space-y-3">
             <div className="border rounded-md p-3 text-center select-none">
               <img
-                src="/lovable-uploads/a3e0d296-1c6b-4987-b782-bd0442ef35a0.png"
-                alt="Captcha phrase: do not reedem it"
+                src="/lovable-uploads/da6daa8b-ed04-4a8d-af76-3876d37c7bc5.png"
+                alt="Captcha phrase: shower"
                 className="mx-auto max-h-20 object-contain"
                 loading="lazy"
               />
